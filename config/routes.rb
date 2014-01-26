@@ -4,7 +4,12 @@ FirstApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'rails/welcome#index'
+
+  # Set routing for "Welcome abord" app according to http://stackoverflow.com/questions/17964830/where-is-the-default-welcome-aboard-page-located-in-my-app
+  get '/rails/info/properties' => "rails/info#properties"
+  get '/rails/info/routes'     => "rails/info#routes"
+  get '/rails/info'            => "rails/info#index"
+  get '/'                      => "rails/welcome#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
