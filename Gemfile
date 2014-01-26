@@ -25,3 +25,4 @@ group :production do
 end
 
 gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging'
